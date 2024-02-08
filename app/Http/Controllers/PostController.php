@@ -7,6 +7,7 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
+<<<<<<< HEAD
    public function index(Post $post)
 {
     return view('posts.index')->with(['posts' => $post->getPaginateByLimit()]);
@@ -19,4 +20,12 @@ class PostController extends Controller
 }
 
 
+=======
+    public function index(Post $post)
+    {
+        return view('posts.index')->with(['posts' => $post->getPaginateByLimit(1)]);  
+       //blade内で使う変数'posts'と設定。'posts'の中身にgetを使い、インスタンス化した$postを代入。
+    }
+}
+>>>>>>> f80a06f56f1dd4e5000ed1f09e05eed786001d4e
 ?>
